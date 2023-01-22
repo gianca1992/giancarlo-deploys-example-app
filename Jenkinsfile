@@ -24,7 +24,7 @@ node {
  
 
 	stage('Push image'){
-		docker.withRegistry('https://registry.hub.docker.com/','docker-hub-credentials') {
+		docker.withRegistry('https://registry.hub.docker.com/', 'docker-hub-credentials') {
 //to push the image from the app variable to the registry, it will accept as argument the image tag, latest 
 
 		app.push('latest')

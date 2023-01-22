@@ -4,7 +4,7 @@
   "description": "A Hello World HTTP server",
   "main": "main.js",
   "scripts": {
-    "test": "node test-triggering-jenkins-job.js",
+    "test": "node test.js",
     "start": "node main.js"
   },
   "repository": {

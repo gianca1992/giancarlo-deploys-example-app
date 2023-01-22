@@ -20,7 +20,17 @@ node {
 		app = docker.build('gianca1992/example-app')
 	}
 
-//third stage to push the image into the docker hub specifying the dockerhub url and the jenkins credential ID linked to the docker credentials 
+//third stage test, app.inside will enable to run jenkins commands and actions within the container just built (inside app), in this case
+//I run a shell command with the command as an argument 
+ 
+	stage('Test'){
+
+	app.inside {
+		sh 'npm test'
+		   }
+	             }
+		    
+//fourth  stage to push the image into the docker hub specifying the dockerhub url and the jenkins credential ID linked to the docker credentials 
  
 
 	stage('Push image'){
